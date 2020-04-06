@@ -73,7 +73,7 @@ ts_library(
 
 ts_devserver(
     name = "devserver",
-    entry_module = "examples_protocol_buffers/app",
+    entry_module = "./app",
     scripts = ["@npm_bazel_labs//grpc_web:bootstrap_scripts"],
     deps = [":app"],
 )

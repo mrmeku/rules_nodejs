@@ -1,4 +1,4 @@
-import {Car} from 'examples_protocol_buffers/car_pb';
+import {Car} from './car_pb';
 
 const car = new Car();
 car.setMake('Porsche');
