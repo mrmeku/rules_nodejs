@@ -5,6 +5,7 @@ load("@npm_bazel_protractor//:index.bzl", "protractor_web_test_suite")
 load("@npm_bazel_rollup//:index.bzl", "rollup_bundle")
 load("@npm_bazel_terser//:index.bzl", "terser_minified")
 load("@npm_bazel_typescript//:index.bzl", "ts_config", "ts_devserver", "ts_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
 
 proto_library(
     name = "tire_proto",
@@ -73,7 +74,7 @@ ts_library(
 
 ts_devserver(
     name = "devserver",
-    entry_module = "./app",
+    entry_module = "examples_protocol_buffers/app",
     scripts = ["@npm_bazel_labs//grpc_web:bootstrap_scripts"],
     deps = [":app"],
 )
