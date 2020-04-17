@@ -1,4 +1,4 @@
-import {DeliveryPerson} from './proto/common/delivery_person_pb';
+import {DeliveryPerson} from 'build_bazel_rules_nodejs/packages/labs/test/grpc_web/proto/common/delivery_person_pb';
 
 declare function require(module: string): any;
 
@@ -17,7 +17,8 @@ describe('DeliveryPerson', () => {
   });
 
   it('pizza_ts_proto is included since it is a transitive dependency', () => {
-    const PROTOS = require('./common/pizza_pb');
+    const PROTOS =
+        require('build_bazel_rules_nodejs/packages/labs/test/grpc_web/proto/common/pizza_pb');
     const Pizza = PROTOS.Pizza;
     const PizzaSize = PROTOS.PizzaSize;
     const person = new DeliveryPerson();
