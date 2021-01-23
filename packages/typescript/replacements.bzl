@@ -24,7 +24,7 @@ TYPESCRIPT_REPLACEMENTS = dict(
         # @build_bazel_rules_typescript//:npm_bazel_typescript_package
         # use this alternate fencing
         "(#|\\/\\/)\\s+BEGIN-DEV-ONLY[\\w\\W]+?(#|\\/\\/)\\s+END-DEV-ONLY": "",
-        "//packages/typescript/internal/worker:worker_adapter": "//@bazel/typescript/internal/worker:worker_adapter.js",
+        "//packages/typescript/internal/worker:worker_adapter": "//@bazel/typescript/internal/worker:index.js",
         # This file gets vendored into our repo
         "@build_bazel_rules_typescript//internal:common": "//@bazel/typescript/internal:common",
         # Replace the local compiler label with one that comes from npm
